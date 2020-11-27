@@ -23,6 +23,7 @@ function NavigationBar(){
             <Nav className="ml-auto">
             <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/about">About Us</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href="/service">Our Services</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/contact">Contact Us</Nav.Link></Nav.Item>
             </Nav>
             </Navbar.Collapse>

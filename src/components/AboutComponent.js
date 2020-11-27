@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image';
 import styled from 'styled-components';
 
 
@@ -28,8 +27,10 @@ function About(){
                     <p className="pp p-3">
                         Sed ut perspiciatis underamanis iste natus error sit 
                         voluptatem accosantium doloremque laudantiuim totem rem aperiam.
+                        Sed ut perspiciatis underamanis iste natus error sit 
+                        voluptatem accosantium doloremque laudantiuim totem rem aperiam.
                     </p>
-                    <p className="p-3"><Button variant="warning" onClick={() => window.open('mailto:email@example.com?subject=Subject&body=Body%20goes%20here')} >Send Mail</Button></p>
+                    <p className="p-3"><Button variant="warning" onClick={() => window.open('mailto:rakeshshrestha3222@gmail.com')} >Send Mail</Button></p>
                     </Col>    
                 </Row>
                     

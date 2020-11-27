@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "name":"Strategy",
+        "img":"https://www.estorm.com.au/wp-content/uploads/2018/08/strategic-planning.jpg",
+        "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "detail":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+        "id": 1,
+        "name":"Branding",
+        "img":"https://ied.eu/wp-content/uploads/2018/05/brand-1.png",
+        "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "detail":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+        "id": 2,
+        "name":"Development",
+        "img":"https://st2.depositphotos.com/2557937/5349/v/950/depositphotos_53498475-stock-illustration-creative-development-word-graph-design.jpg",
+        "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "detail":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+        "id": 3,
+        "img":"https://cdn.mos.cms.futurecdn.net/CT9xCjqrhnPD4ivB6B8Hqe.jpg",
+        "name":"Web Design",
+        "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "detail":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+        "id": 4,
+        "name":"Social Media",
+        "img":"https://digitalmediathoughts.com/wp-content/uploads/2018/06/how-to-brand-yourself-on-social-media.jpeg",
+        "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "detail":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+        "id": 5,
+        "name":"Ecommerce",
+        "img":"https://froggyads.com/blog/wp-content/uploads/2020/05/Understanding-E-Commerce-Types-and-Examples.jpg",
+        "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "detail":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+]

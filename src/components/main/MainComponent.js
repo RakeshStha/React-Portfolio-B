@@ -7,6 +7,7 @@ import Error from './Error404';
 import About from '../AboutComponent';
 import Contact from '../ContactComponent';
 import Home from '../HomeComponent';
+import Service from '../ServiceComponent';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
@@ -19,6 +20,7 @@ function Main(){
                    <Route exact path="/" component={Home}/>
                    <Route path = "/about" component={About}/>
                    <Route path="/contact" component={Contact}/>
+                   <Route path="/service" component={Service}/>
                     <Route component = {Error}/>
                </Switch>
            </Router>
