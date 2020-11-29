@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container,Card, Row, Col, Button } from 'react-bootstrap';
+import { Container,Card, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 
 import Data from './data/data.json';
@@ -14,7 +14,6 @@ const Styles = styled.div`
 }
 `
 
-
 function Service() {
     return (
         <Styles>
@@ -28,7 +27,7 @@ function Service() {
                 {Data.map(file => {
                     return(
                         <div key= {file.id} className="col-sm-3 m-1">
-                            <Card.Img width="100%" height="200px" src={file.img} alt={file.name} />
+                            <Card.Img width="100%" height="200px" src={file.img} alt={file.name} fluid/>
                             <Card.Body>
                                 <Card.Title> {file.name} </Card.Title>
                                 <Card.Text> {file.preview} </Card.Text>
@@ -42,6 +41,7 @@ function Service() {
             <Button variant="outline-dark">Learn More</Button>
             </p>
         </Container>
+        
         </Styles>
     )
 }
