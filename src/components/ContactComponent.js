@@ -40,7 +40,7 @@ class Contact extends Component{
         })
     }
     handlerSubmit = (e) =>{
-        alert(`${this.state.name} ${this.state.email} ${this.state.message}`)
+        alert(JSON.stringify(this.state))
         console.log(this.state)
         e.preventDefault()
     }
@@ -99,7 +99,7 @@ class Contact extends Component{
                     <Form.Row>
                         <Col>
                         <Form.Control 
-                        type="textarea" rows={3} 
+                        as="textarea" rows={3} 
                         placeholder="Enter your message"
                         value={this.state.message} 
                         onChange={this.handlerMessage}/>
