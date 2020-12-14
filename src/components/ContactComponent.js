@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { IconContext } from 'react-icons';
 import { FaGithub, FaFacebook, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 import styled from 'styled-components';
-
+import {Control, LocalForm, Errors} from 'react-redux-form';
 
 
 const Styles = styled.div`
@@ -13,37 +13,26 @@ const Styles = styled.div`
 }
 
 `
+const required = (val) => val && val.length;
+const maxLength = (len) => (val) => !(val) || (val.length <= len);
+const minLength = (len) => (val) => (val) && (val.length >= len);
+// for numbers
+//const isNumber = (val) => !isNaN(Number(val));
+const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
+
 
 class Contact extends Component{
     constructor(props){
         super(props)
-        this.state = {
-            name:'',
-            email:'',
-            message:''
-        }
+        
     }
     
-    handlerName = (e) => {
-        this.setState({
-            name:e.target.value
-        })
+   
+    handlerSubmit(values){
+        console.log(JSON.stringify(values));
+        alert(JSON.stringify(values));
     }
-    handlerEmailChange = (e) => {
-        this.setState({
-            email:e.target.value
-        })
-    }
-    handlerMessage = (e) => {
-        this.setState({
-            message:e.target.value
-        })
-    }
-    handlerSubmit = (e) =>{
-        alert(JSON.stringify(this.state))
-        console.log(this.state)
-        e.preventDefault()
-    }
+    
     
     render(){
     return(
@@ -76,47 +65,90 @@ class Contact extends Component{
                 <Col sm={6} className="p-3">
                     <div className="m-5">
                     <Card.Body className="p-2">
-                    <Form onSubmit={this.handlerSubmit}>
-                    <Form.Row>
+
+                    <LocalForm onSubmit={(values) => this.handlerSubmit(values)}>
+                    <Row className="form-group">
                         <Col>
-                        <Form.Control
-                        type="text"  
+                        <Control.text model=".name"
+                          name="name"
+                          className="form-control"
                         placeholder="Enter your Name" 
-                        value={this.state.name} 
-                        onChange={this.handlerName}
-                        />
+                        validators={{
+                            required, minLength: minLength(3), maxLength: maxLength(15)
+                        }}
+                       />
+                       <Errors
+                            className="text-danger"
+                            model=".name"
+                            show="touched"
+                            messages={{
+                                required: 'Required',
+                                minLength: 'Must be greater than 2 characters',
+                                maxLength: 'Must be 15 characters or less'
+                            }}
+                            
+                       />
                         </Col>
-                    </Form.Row><br></br>
-                    <Form.Row>
+                    </Row><br></br>
+                    <Row className="form-group">
                     <Col>
-                        <Form.Control 
-                        type="email"
+                        <Control.text model=".email" 
+                        name="email"
+                        className="form-control"
                         placeholder="Enter a valid email address" 
-                        value={this.state.email}
-                        onChange={this.handlerEmailChange}/>
+                        validators={{
+                            required, validEmail
+                        }}
+                       />
+                       <Errors
+                            className="text-danger"
+                            model=".email"
+                            show="touched"
+                            messages={{
+                                required: 'Required',
+                                validEmail: 'Invalid Email Address'
+                            }}
+                       />
                     </Col>
-                    </Form.Row><br></br>
-                    <Form.Row>
+                    </Row><br></br>
+                    <Row className="form-group">
                         <Col>
-                        <Form.Control 
-                        as="textarea" rows={3} 
+                        <Control.textarea model=".message" 
+                         rows={3} 
                         placeholder="Enter your message"
-                        value={this.state.message} 
-                        onChange={this.handlerMessage}/>
+                        className="form-control"
+                        validators={{
+                            required, minLength: minLength(3), maxLength: maxLength(100)
+                        }}
+                       />
+                       <Errors
+                            className="text-danger"
+                            model=".message"
+                            show="touched"
+                            messages={{
+                                required: 'Required',
+                                minLength: 'Must be greater than 2 characters',
+                                maxLength: 'Must be 100 characters or less'
+                            }}
+                            
+                       />
                         </Col>
-                    </Form.Row><br></br>
-                    <Form.Row>
+                    </Row><br></br>
+                    <Row className="form-group">
                         <Col>
-                        <Form.Check
-                                type="checkbox"
-                                className="my-1 mr-sm-2 a"
-                                label="I accept the Terms of Service"
-                                
-                            />
+                        <div className="form-check">
+                                <Control.checkbox
+                                        model=".agree"
+                                        name="agree"
+                                        className="form-check-input"
+                                        />
+                                {' '}
+                                <strong>I accept the Terms of Service</strong>
+                          </div>
                         </Col>
-                    </Form.Row><br></br>
+                    </Row><br></br>
                     <Button type="submit" className="rounded-pill bg-secondary">Submit</Button>
-                    </Form>
+                    </LocalForm>
                     </Card.Body>
                     </div>
                 </Col>
