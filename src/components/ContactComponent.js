@@ -166,58 +166,6 @@ class Contact extends Component{
                     </Row><br></br>
                     <Row className="form-group">
                         <Col>
-                        <Control type="password" model=".password" 
-                        name="password"
-                        className="form-control"
-                        placeholder="Enter your password" 
-                        validators={{
-                            required, 
-                                passwordsMatch: (value) => vals.password === vals.conPassword,
-                              
-                        }}
-                        
-                       />
-                       <Errors
-                            className="text-danger"
-                            model=".password"
-                            show="touched"
-                            messages={{
-                                required: 'Required',
-                                
-                                passwordsMatch: 'Password doesnot match'
-                            }}
-                            
-                    
-                       />
-                       
-                        </Col>
-                    </Row><br></br>
-                    <Row className="form-group">
-                        <Col>
-                        <Control type="password" model=".conpassword" 
-                        name="conpassword"
-                        className="form-control"
-                        placeholder="Please confirm your password" 
-                        validators={{
-                            required
-                        }}
-                       />
-                       <Errors
-                            className="text-danger"
-                            model=".conpassword"
-                            show="touched"
-                            messages={{
-                                required: 'Required',
-                                
-                                passwordsMatch: 'Password doesnot match'
-                            }}
-                            
-                    
-                       />
-                        </Col>
-                    </Row><br></br>
-                    <Row className="form-group">
-                        <Col>
                             <Checkbox name="agree" value={this.state.agree} onChange={this.handleAgree}
                             
                             > <strong>I accepts the terms and condition.</strong></Checkbox>
